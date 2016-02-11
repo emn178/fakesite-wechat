@@ -47,4 +47,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Contact
 The project's website is located at https://github.com/emn178/fakesite-wechat  
-Author: emn178@gmail.com
+Author: Chen, Yi-Cyuan (emn178@gmail.com)

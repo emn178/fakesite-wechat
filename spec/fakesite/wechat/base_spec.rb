@@ -57,7 +57,7 @@ describe Fakesite::Wechat::Base do
     it { expect(redirect_url).to eq 'https://passport.yhd.com/wechat/callback.do?code=1441197000&state=3d6be0a4035d839573b04816624a415e' }
     it { expect(Net::HTTP.get(URI.parse("https://api.weixin.qq.com/sns/oauth2/access_token?code=1441197000"))).to eq "{\"openid\":\"1\",\"access_token\":\"T1441197000\",\"refresh_token\":\"R1441197000\",\"scope\":\"snsapi_login\",\"expires_in\":7200}" }
     it { expect{Net::HTTP.get(URI.parse("https://api.weixin.qq.com/sns/oauth2/access_token?code=notfound"))}.to raise_error(WebMock::NetConnectNotAllowedError) }
-    it { expect(Net::HTTP.get(URI.parse("https://api.weixin.qq.com/sns/userinfo?openid=1"))).to eq "{\"nickname\":\"emn178\",\"sex\":null,\"province\":null,\"city\":null,\"country\":\"Taiwan\",\"headimgurl\":null}" }
+    it { expect(Net::HTTP.get(URI.parse("https://api.weixin.qq.com/sns/userinfo?openid=1"))).to eq "{\"nickname\":\"emn178\",\"sex\":null,\"province\":null,\"city\":null,\"country\":\"Taiwan\",\"headimgurl\":null,\"openid\":\"1\"}" }
     it { expect{Net::HTTP.get(URI.parse("https://api.weixin.qq.com/sns/userinfo?openid=notfound"))}.to raise_error(WebMock::NetConnectNotAllowedError) }
   end
 end

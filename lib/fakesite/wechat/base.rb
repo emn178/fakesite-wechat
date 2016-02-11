@@ -40,6 +40,7 @@ module Fakesite
           body[key] = params[key]
           params.delete(key)
         end
+        body["openid"] = openid
 
         stub_request(:get, "https://#{ApiHost}/sns/userinfo")
           .with(:query => hash_including({:openid => openid}))

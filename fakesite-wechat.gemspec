@@ -6,7 +6,7 @@ require 'fakesite/wechat/version'
 Gem::Specification.new do |spec|
   spec.name          = "fakesite-wechat"
   spec.version       = Fakesite::Wechat::VERSION
-  spec.authors       = ["Chen Yi-Cyuan"]
+  spec.authors       = ["Chen, Yi-Cyuan"]
   spec.email         = ["emn178@gmail.com"]
 
   spec.summary       = %q{A fakesite plugin that provides a stub method for wechat.}
